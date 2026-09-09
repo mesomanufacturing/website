@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Meso Manufacturing Website
 
-## Getting Started
+The public website for Meso Manufacturing.
 
-First, run the development server:
+## Local development
+
+Use Node.js 22 or newer, then install and run the project:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Useful commands
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run lint:fix
+npm run format
+npm run format:check
+npm run build
+```
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+- `src/app` — pages, layouts, metadata, and route handlers.
+- `src/components` — reusable interface components.
+- `src/lib` — shared utilities and server-side integrations.
+- `public` — static files that are safe to publish.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Configuration and secrets
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Copy `.env.example` to `.env.local` when configuration is needed. `.env.local` is ignored by Git.
 
-## Deploy on Vercel
+Values prefixed with `NEXT_PUBLIC_` are bundled for the browser. Do not place passwords, API keys, or other secrets in them.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Working agreement
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Create a branch for each change and review its Vercel preview before merging to `main`.
+- Keep company IP, credentials, customer information, and private source material out of the public repository.
+- Keep the first release intentionally small; add services such as Supabase, Resend, analytics, or monitoring only when they are needed.
