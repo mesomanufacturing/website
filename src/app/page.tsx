@@ -1,28 +1,35 @@
+import Image from "next/image";
+import ThermalField from "@/components/thermal-field";
+import styles from "./launch.module.css";
+
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col">
-      <header className="border-b border-black/10 px-6 py-5 sm:px-10">
-        <p className="text-sm font-semibold tracking-[0.16em] uppercase">Meso Manufacturing</p>
+    <main className={styles.page}>
+      <ThermalField />
+      <header className={styles.header}>
+        <Image
+          src="/meso-logo.png"
+          alt="Meso Manufacturing"
+          width={2686}
+          height={1000}
+          sizes="(max-width: 600px) 156px, 184px"
+          loading="eager"
+          className={styles.logo}
+        />
       </header>
-
-      <main className="flex flex-1 items-center px-6 py-24 sm:px-10">
-        <div className="max-w-2xl">
-          <p className="mb-6 text-sm tracking-[0.16em] uppercase text-black/60">
-            Website in progress
-          </p>
-          <h1 className="text-4xl font-semibold tracking-tight text-balance sm:text-6xl">
-            Large-scale composite manufacturing.
-          </h1>
-          <p className="mt-8 max-w-xl text-lg leading-8 text-black/70">
-            Meso Manufacturing develops large, complex polymer composite parts with measurable
-            performance. This is a temporary page while we prepare our website.
-          </p>
-        </div>
-      </main>
-
-      <footer className="border-t border-black/10 px-6 py-5 text-sm text-black/60 sm:px-10">
-        © {new Date().getFullYear()} Meso Manufacturing
+      <section className={styles.message} aria-labelledby="launch-heading">
+        <p className={styles.kicker}>Something is taking shape.</p>
+        <h1 id="launch-heading">
+          Launching soon<span>.</span>
+        </h1>
+      </section>
+      <footer className={styles.footer}>
+        <a className={styles.contact} href="mailto:contact@mesomanufacturing.com">
+          <span>Get in touch</span>
+          <span>contact@mesomanufacturing.com</span>
+        </a>
+        <span>© {new Date().getFullYear()} Meso Manufacturing</span>
       </footer>
-    </div>
+    </main>
   );
 }

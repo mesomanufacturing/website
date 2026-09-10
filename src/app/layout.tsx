@@ -1,10 +1,13 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Meso Manufacturing",
-  description: "Large-scale composite manufacturing.",
+  icons: { icon: "/meso-icon.svg" },
+  title: "Meso Manufacturing — Launching soon",
+  description: "Large-scale composite manufacturing. Meso Manufacturing. Launching soon.",
 };
+
+export const viewport: Viewport = { themeColor: "#090c10" };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
