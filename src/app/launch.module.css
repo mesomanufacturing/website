@@ -53,7 +53,7 @@
   padding: clamp(300px, 43svh, 550px) 0 60px;
 }
 .kicker {
-  font-size: 13px;
+  font-size: 15px;
   color: #b5b7c1;
   letter-spacing: 0.04em;
   margin: 0 0 22px;
@@ -74,7 +74,6 @@
   align-items: center;
   gap: 25px;
   padding: 25px 0 28px;
-  border-top: 1px solid #ffffff21;
   color: #898e98;
   font-size: 12px;
   line-height: 1.5;
