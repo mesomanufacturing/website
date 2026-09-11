@@ -28,7 +28,7 @@ void main() {
   vec2 p = (gl_FragCoord.xy - resolution*0.5) / resolution.y;
   vec2 offset = p - pointer;
   float touch = exp(-dot(offset, offset)*12.0) * influence;
-  float t = time*0.20;
+  float t = time*0.23;
   // A soft, local lens bends the layers underneath the moving cursor.
   p += offset * touch * 0.32;
   p.y += touch * 0.075;

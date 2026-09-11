@@ -71,7 +71,7 @@
 .footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 25px;
   padding: 25px 0 28px;
   color: #898e98;
@@ -80,10 +80,13 @@
 }
 .contact {
   display: flex;
+  align-items: baseline;
   flex-wrap: wrap;
   column-gap: 18px;
   row-gap: 4px;
   color: inherit;
+  margin: 0;
+  padding: 0;
   text-decoration: none;
 }
 .contact span:first-child {
