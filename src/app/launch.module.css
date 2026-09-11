@@ -64,6 +64,8 @@
   line-height: 1.05;
   letter-spacing: -0.065em;
   margin: 0;
+  /* Correct the L's side bearing so the three text blocks share an optical edge. */
+  transform: translateX(-4px);
 }
 .message h1 span {
   color: #c0a58d;
