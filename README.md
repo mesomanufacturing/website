@@ -40,4 +40,3 @@ Values prefixed with `NEXT_PUBLIC_` are bundled for the browser. Do not place pa
 
 - Create a branch for each change and review its Vercel preview before merging to `main`.
 - Keep company IP, credentials, customer information, and private source material out of the public repository.
-- Keep the first release intentionally small; add services such as Supabase, Resend, analytics, or monitoring only when they are needed.
